@@ -1,13 +1,11 @@
 " 1. Vim-Plug {{{1 "
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " Reminder {{{2 "
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 " 2}}} "
-
 call plug#begin('~/.vim/plugged')
 
 " Reminder {{{2 "
@@ -21,9 +19,9 @@ call plug#begin('~/.vim/plugged')
 " Plugin outside ~/.vim/plugged with post-update hook
 " Unmanaged plugin (manually installed and updated)
 " 2}}} "
-
 " Plug 'mipmip/vim-fluid'
 " Plug 'jasonwoodland/vim-html-indent'
+" Plug 'aikawa9376/autosave.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
@@ -83,6 +81,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'tmhedberg/SimpylFold'
 Plug 'karoliskoncevicius/vim-sendtowindow'
+Plug 'aikawa9376/autosave.vim'
 " Unused plugins {{{2 "
 " Plug 'jiangmiao/auto-pairs'
 " Plug 'unblevable/quick-scope'
@@ -794,6 +793,6 @@ map <Leader>ppt :!cd %:h && pandoc --pdf-engine=xelatex --template=$HOME/Desktop
 " map <Leader>pdf :!cd %:h && pandoc --pdf-engine=xelatex --template=$HOME/Desktop/default.latex % -o %:r.pdf && open -a preview %:r.pdf<cr>
 map <Leader>pdf :!cd %:h && pandoc --pdf-engine=xelatex % -o %:r.pdf && pdf %:r.pdf<cr>
 source ~/vimzettel/myscript.vim
-source ~/vimzettel/autosave.vim
+" source ~/vimzettel/autosave.vim
 source ~/vimzettel/focus.vim
 " 1}}} "
